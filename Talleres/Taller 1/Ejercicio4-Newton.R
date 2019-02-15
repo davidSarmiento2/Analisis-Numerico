@@ -33,7 +33,7 @@ newton <- function(a,b,error) {
   plot(xa,Primera(xa),type="l",horizontal,vertical, col="red",xlab="t",ylab="r(t)")
   par(new=TRUE)
   plot(xa,Segunda(xa),type="l",horizontal, vertical, col="darkblue",xlab="t",ylab="r(t)")
-  title(main="Gráfica Intersecciones ")
+  title(main="GrÃ¡fica Intersecciones ")
   
   cat("Iteraciones = ", iteraciones, " t = ", x, "\n")
 }
