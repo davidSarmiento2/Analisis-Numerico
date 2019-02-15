@@ -52,7 +52,7 @@ biseccion = function(a,b,error) {
   plot(x,Primera(x),type="l",horizontal,vertical, col="red",xlab="t",ylab="r(t)")
   par(new=TRUE)
   plot(x,Segunda(x),type="l",horizontal,vertical, col="darkblue",xlab="t",ylab="r(t)")
-  title(main="Gr·fica Intersecciones Encontradas")
+  title(main="Gr√°fica Intersecciones Encontradas")
   
   
   cat("Iteraciones =",iterRealizadas,"Resultado = ",puntoMedio,"\n")
