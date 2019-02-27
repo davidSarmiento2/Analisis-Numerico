@@ -1,0 +1,45 @@
+rm(list=ls())
+library(pracma)
+library(Matrix)
+
+#Punto 3.1
+A = matrix(c(4, -1, -1, -1, -1, 4,
+             -1, -1, -1, -1, 4, -1,
+             -1, -1, -1, 4), nrow=4, byrow=TRUE)
+
+b = c(1, 5, 1.5,-2.33)
+
+poli = charpoly(A, info = FALSE)
+print(poli)
+
+
+#Punto 3.2
+
+tril1 <- function(M, k = 0) {
+  if (k == 0) {
+    M[upper.tri(M, diag = TRUE)] = 0
+  } else {
+    M[col(M) >= row(M) + k + 1] = 0
+  }
+  return(M)
+}
+
+PRUEBA= matrix(c(2,3,4,1,2,3,5,6,7),nrow=3)
+print(PRUEBA)
+print(tril1(PRUEBA,k=1))
+
+#Parte b
+diagonal <- function(M) {
+  
+  M[col(M)!=row(M)] <- 0
+  
+  return(M)
+}
+
+N = matrix(c(5,3,6,4,3,
+             4,1,8,5,8,
+             0,2,9,2,3,
+             4,6,7,8,2,
+             1,3,6,9,3),nrow=5)
+print(N)
+print(diag1(N))
